@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Services</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f3f4f6;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+    header {
+      background-color: #232f3e;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #37475a;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 4px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #febd69;
+      color: #232f3e;
+    }
+
+    /* Main Section */
+    main {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    main h2 {
+      font-size: 2.5rem;
+      color: #111827;
+      margin-bottom: 2rem;
+    }
+
+    /* Services List */
+    .services-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2rem 0;
+    }
+
+    .service-item {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 2rem;
+      max-width: 300px;
+      width: 100%;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .service-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-item h3 {
+      font-size: 1.8rem;
+      color: #111827;
+      margin-bottom: 1rem;
+    }
+
+    .service-item p {
+      color: #4b5563;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #232f3e;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+  </style>
+</head>
+<body>
+
+<div id="header"></div>
+
+  <main>
+    <h2>We Offer:</h2>
+
+    <div class="services-list">
+      <div class="service-item">
+        <h3>Fast Delivery</h3>
+        <p>We ensure quick and reliable delivery to your doorstep, so you can enjoy your purchases as soon as possible.</p>
+      </div>
+
+      <div class="service-item">
+        <h3>Easy Returns</h3>
+        <p>Returning items is a breeze! We offer hassle-free returns on most items within a set period of time.</p>
+      </div>
+
+      <div class="service-item">
+        <h3>24/7 Support</h3>
+        <p>Our customer support is available around the clock to assist you with any inquiries or issues you may have.</p>
+      </div>
+    </div>
+  </main>
+<div id="footer"></div>
+<script src="index.js"></script>
+</body>
+</html>

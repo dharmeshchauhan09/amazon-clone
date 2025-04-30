@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f3f4f6;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background-color: #232f3e;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    nav {
+      background-color: #37475a;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 4px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #febd69;
+      color: #232f3e;
+    }
+
+    main {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    main h2 {
+      font-size: 2.5rem;
+      color: #111827;
+      margin-bottom: 2rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+      padding-top: 2rem;
+    }
+
+    .product {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+      max-width: 300px;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .product h3 {
+      font-size: 1.5rem;
+      color: #111827;
+      margin-bottom: 0.5rem;
+    }
+
+    .product p {
+      font-size: 1.2rem;
+      color: #4b5563;
+      margin-bottom: 1rem;
+    }
+
+    .product button {
+      background-color: #febd69;
+      color: #232f3e;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .product button:hover {
+      background-color: #ff9f00;
+    }
+
+    footer {
+      background-color: #232f3e;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <h2>Products</h2>
+
+    <div class="product-grid">
+      <!-- Product Cards -->
+      <div class="product">
+        <img src="smartwatch.jpg" alt="Smart Watch">
+        <h3>Smart Watch</h3>
+        <p>2499</p>
+        <button class="add-to-cart" data-name="Smart Watch" data-price="2499" data-image="smartwatch.jpg">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Wireless Earbuds.jpg" alt="Wireless Earbuds">
+        <h3>Wireless Earbuds</h3>
+        <p>1999</p>
+        <button class="add-to-cart" data-name="Wireless Earbuds" data-price="1999" data-image="Wireless Earbuds.jpg">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Bluetooth Speaker.webp" alt="Bluetooth Speaker">
+        <h3>Bluetooth Speaker</h3>
+        <p>1299</p>
+        <button class="add-to-cart" data-name="Bluetooth Speaker" data-price="1299" data-image="Bluetooth Speaker.webp">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Laptop Stand.jpg" alt="Laptop Stand">
+        <h3>Laptop Stand</h3>
+        <p>999</p>
+        <button class="add-to-cart" data-name="Laptop Stand" data-price="999" data-image="Laptop Stand.jpg">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Gaming Mouse.webp" alt="Gaming Mouse">
+        <h3>Gaming Mouse</h3>
+        <p>499</p>
+        <button class="add-to-cart" data-name="Gaming Mouse" data-price="499" data-image="Gaming Mouse.webp">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Desk Lamp.webp" alt="Desk Lamp">
+        <h3>Desk Lamp</h3>
+        <p>299</p>
+        <button class="add-to-cart" data-name="Desk Lamp" data-price="299" data-image="Desk Lamp.webp">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Phone Case.webp" alt="Phone Case">
+        <h3>Phone Case</h3>
+        <p>199</p>
+        <button class="add-to-cart" data-name="Phone Case" data-price="199" data-image="Phone Case.webp">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Smart Light Bulb.webp" alt="Smart Light Bulb">
+        <h3>Smart Light Bulb</h3>
+        <p>99</p>
+        <button class="add-to-cart" data-name="Smart Light Bulb" data-price="99" data-image="Smart Light Bulb.webp">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Portable Charger.jpg" alt="Portable Charger">
+        <h3>Portable Charger</h3>
+        <p>5999</p>
+        <button class="add-to-cart" data-name="Portable Charger" data-price="5999" data-image="Portable Charger.jpg">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Smartphone.jpg" alt="Smartphone">
+        <h3>Smartphone</h3>
+        <p>19999</p>
+        <button class="add-to-cart" data-name="Smartphone" data-price="19999" data-image="Smartphone.jpg">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Wireless Mouse.webp" alt="Wireless Mouse">
+        <h3>Wireless Mouse</h3>
+        <p>499</p>
+        <button class="add-to-cart" data-name="Wireless Mouse" data-price="499" data-image="Wireless Mouse.webp">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Bluetooth Headphones.webp" alt="Bluetooth Headphones">
+        <h3>Bluetooth Headphones</h3>
+        <p>2999</p>
+        <button class="add-to-cart" data-name="Bluetooth Headphones" data-price="2999" data-image="Bluetooth Headphones.webp">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Macboook.webp" alt="Macboook">
+        <h3>Macboook</h3>
+        <p>90999</p>
+        <button class="add-to-cart" data-name="Macboook" data-price="90999" data-image="Macboook.webp">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Electric Toothbrush.webp" alt="Electric Toothbrush">
+        <h3>Electric Toothbrush</h3>
+        <p>699</p>
+        <button class="add-to-cart" data-name="Electric Toothbrush" data-price="699" data-image="Electric Toothbrush.webp">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Smart Thermostat.webp" alt="Smart Thermostat">
+        <h3>Smart Thermostat</h3>
+        <p>18999</p>
+        <button class="add-to-cart" data-name="Smart Thermostat" data-price="18999" data-image="Smart Thermostat.webp">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Portable Speaker.jpg" alt="Portable Speaker">
+        <h3>Portable Speaker</h3>
+        <p>399</p>
+        <button class="add-to-cart" data-name="Portable Speaker" data-price="399" data-image="Portable Speaker.jpg">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="VR Headset.webp" alt="VR Headset">
+        <h3>VR Headset</h3>
+        <p>4499</p>
+        <button class="add-to-cart" data-name="VR Headset" data-price="4499" data-image="VR Headset.webp">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Webcam.jpg" alt="Webcam">
+        <h3>Webcam</h3>
+        <p>799</p>
+        <button class="add-to-cart" data-name="Webcam" data-price="799" data-image="Webcam.jpg">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Digital Camera.webp" alt="Digital Camera">
+        <h3>Digital Camera</h3>
+        <p>20999</p>
+        <button class="add-to-cart" data-name="Digital Camera" data-price="20999" data-image="Digital Camera.webp">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Action Camera.webp" alt="Action Camera">
+        <h3>Action Camera</h3>
+        <p>15000</p>
+        <button class="add-to-cart" data-name="Action Camera" data-price="15000" data-image="Action Camera.webp">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', () => {
+        const name = button.dataset.name;
+        const price = parseInt(button.dataset.price);
+        const image = button.dataset.image;
+
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const existing = cart.find(item => item.name === name);
+        if (existing) {
+          existing.quantity += 1;
+        } else {
+          cart.push({ name, price, image, quantity: 1 });
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${name} added to cart!`);
+      });
+    });
+  </script>
+  <div id="footer"></div>
+<script src="index.js"></script>
+</body>
+</html>
