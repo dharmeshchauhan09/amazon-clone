@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Header</title>
+  <title>Amazon Clone</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     :root {
       --primary-bg: #232f3e;
       --accent: #febd69;
-      --hover-accent: #ff9900;
       --text-light: #ffffff;
     }
 
@@ -26,47 +25,65 @@
     header {
       background-color: var(--primary-bg);
       color: var(--text-light);
-      text-align: center;
       padding: 1.5rem 1rem;
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: bold;
       letter-spacing: 1px;
+      text-align: center;
+      text-transform: uppercase;
     }
 
-    nav.navbar {
+    .navbar {
       background-color: var(--primary-bg);
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      padding: 1rem;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      align-items: center;
+      display: none;
+      padding-bottom: 1rem;
     }
 
-    nav.navbar a {
+    .navbar a {
       color: var(--text-light);
       text-decoration: none;
-      padding: 0.5rem 1rem;
-      font-weight: 500;
-      border-radius: 4px;
-      transition: background-color 0.3s ease, transform 0.2s ease;
+      padding: 0.75rem 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      width: 100%;
+      text-align: center;
+      transition: background-color 0.3s ease;
     }
 
-    nav.navbar a:hover {
+    .navbar a:hover {
       background-color: var(--accent);
       color: #111;
-      transform: scale(1.05);
     }
 
-    @media (max-width: 768px) {
-      nav.navbar {
-        flex-direction: column;
-        align-items: center;
+    .menu-toggle {
+      background: none;
+      border: none;
+      color: var(--text-light);
+      font-size: 1.8rem;
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media (min-width: 769px) {
+      .menu-toggle {
+        display: none;
       }
 
-      nav.navbar a {
-        width: 100%;
-        text-align: center;
+      .navbar {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+      }
+
+      .navbar a {
+        width: auto;
       }
     }
   </style>
@@ -75,9 +92,10 @@
 
   <header>
     Amazon Clone
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
   </header>
 
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="services.html">Services</a>
@@ -85,6 +103,13 @@
     <a href="contact.html">Contact</a>
     <a href="cart.html">Cart</a>
   </nav>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
 
 </body>
 </html>
