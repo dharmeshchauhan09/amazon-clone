@@ -1,48 +1,154 @@
-<footer style="background-color: #232f3e; color: white; padding: 2.5rem 1rem; font-family: Arial, sans-serif;">
-    <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
-      
-      <!-- Amazon Clone Info -->
-      <div style="flex: 1 1 250px;">
-        <h2 style="margin-bottom: 1rem;">Amazon Clone</h2>
-        <p style="font-size: 0.95rem; line-height: 1.6;">
-          Experience a seamless shopping experience with our Amazon-inspired clone. Great deals, fast delivery, and the best customer service.
-        </p>
-        <div style="margin-top: 1rem;">
-          <a href="#" style="margin-right: 10px; color: #febd69;">Facebook</a>
-          <a href="#" style="margin-right: 10px; color: #febd69;">Twitter</a>
-          <a href="#" style="color: #febd69;">Instagram</a>
-        </div>
-      </div>
-  
-      <!-- Quick Links -->
-      <div style="flex: 1 1 200px;">
-        <h3 style="margin-bottom: 1rem;">Quick Links</h3>
-        <ul style="list-style: none; padding: 0; line-height: 1.8;">
-          <li><a href="index.html" style="color: white;">Home</a></li>
-          <li><a href="about.html" style="color: white;">About</a></li>
-          <li><a href="services.html" style="color: white;">Services</a></li>
-          <li><a href="shopping.html" style="color: white;">Shop</a></li>
-          <li><a href="cart.html" style="color: white;">Cart</a></li>
-          <li><a href="contact.html" style="color: white;">Contact</a></li>
-        </ul>
-      </div>
-  
-      <!-- Help & Info -->
-      <div style="flex: 1 1 200px;">
-        <h3 style="margin-bottom: 1rem;">Help</h3>
-        <ul style="list-style: none; padding: 0; line-height: 1.8;">
-          <li><a href="faq.html" style="color: white;">FAQs</a></li>
-          <li><a href="payment.html" style="color: white;">Payment Options</a></li>
-          <li><a href="return-policy.html" style="color: white;">Return Policy</a></li>
-          <li><a href="track-order.html" style="color: white;">Track Order</a></li>
-          <li><a href="privacy.html" style="color: white;">Privacy Policy</a></li>
-        </ul>
-      </div>
-  
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Brand Section -->
+    <div class="footer-brand">
+      <h2>Amazon Clone</h2>
     </div>
-  
-    <div style="text-align: center; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #37475a;">
-      <p style="font-size: 0.9rem;">&copy; 2025 Amazon Clone. All rights reserved.</p>
+
+    <!-- About Section -->
+    <div class="footer-section about">
+      <p>
+        Experience a seamless shopping experience with our Amazon-inspired platform. Great deals, fast delivery, and top-notch service.
+      </p>
     </div>
-  </footer>
-  
+
+    <!-- Quick Links -->
+    <div class="footer-section links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="shopping.html">Shop</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Help Section -->
+    <div class="footer-section help">
+      <h4>Help & Info</h4>
+      <ul>
+        <li><a href="faq.html">FAQs</a></li>
+        <li><a href="payment.html">Payment Options</a></li>
+        <li><a href="return-policy.html">Return Policy</a></li>
+        <li><a href="track-order.html">Track Order</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Contact -->
+    <div class="footer-section contact">
+      <h4>Connect With Us</h4>
+      <p>Email: support@amazonclone.com</p>
+      <p>Phone: +123-456-7890</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Amazon Clone. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+<style>
+.footer {
+  background-color: #1c1c1c;
+  color: #f1f1f1;
+  padding: 60px 20px 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.footer-brand {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.footer-brand h2 {
+  font-size: 36px;
+  color: #f7c04a;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px;
+}
+.footer-section {
+  flex: 1 1 250px;
+  margin: 10px;
+}
+.footer-section h4 {
+  color: #f7c04a;
+  margin-bottom: 15px;
+}
+.footer-section p,
+.footer-section li {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ccc;
+}
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-section ul li a:hover {
+  color: #f7c04a;
+  text-decoration: underline;
+}
+.social-icons {
+  margin-top: 15px;
+}
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #f7c04a;
+  color: #1c1c1c;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+.social-icons a:hover {
+  background-color: #fff;
+  color: #f7c04a;
+  transform: scale(1.1);
+}
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #999;
+}
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-section {
+    max-width: 90%;
+    text-align: center;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+}
+</style>
